@@ -6,7 +6,10 @@
             <li>Name: {{$name}}</li>
             <li>Phone: {{$phone}}</li>
             <li>Email: {{$email}}</li>
-            <li>Summary: {{$option}}</li>
+            <li>Basic Scraping: {{$bs}}</li>
+            <li>Basic Inspection: {{$bi}}</li>
+            <li>Anode CHange: {{$ac}}</li>
+            <li>Minor Repair: {{$mr}}</li>
         </ul>
     </div>
 @endsection

@@ -19,14 +19,20 @@ class Divingmail extends Mailable
     protected $name;
     protected $phone;
     protected $email;
-    protected $option;
+    protected $bs;
+    protected $bi;
+    protected $ac;
+    protected $mc;
 
-    public function __construct($name, $phone, $email, $option)
+    public function __construct($name, $phone, $email,$bs, $bi, $ac, $mc)
     {
         $this->name = $name;
         $this->phone = $phone;
         $this->email = $email;
-        $this->option = $option;
+        $this->bs = $bs;
+        $this->bi = $bi;
+        $this->ac = $ac;
+        $this->mr = $mr;
     }
 
     /**
@@ -37,12 +43,15 @@ class Divingmail extends Mailable
     public function build()
     {
         return $this
-            ->subject('Financing Contact Mail')
+            ->subject('Diving Contact Mail')
             ->view('mails.diving', [
                 'name' => $this->name,
                 'phone' => $this->phone,
                 'email' => $this->email,
-            'option' => $this->option,
+            'bs' => $this->bs,
+            'bi' => $this->bi,
+            'ac' => $this->ac,
+            'mr' => $this->mr,
             ]);
     }
 }
